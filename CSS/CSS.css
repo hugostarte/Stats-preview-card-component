@@ -1,0 +1,124 @@
+:root {
+    --Very_dark_blue: hsl(233, 47%, 7%);
+    --Dark_desaturated_blue: hsl(244, 38%, 16%);
+    --Soft_violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --Slightly_transparent_white: hsla(0, 0%, 100%, 0.75); 
+    --Slightly_transparent_white_stat_headings: hsla(0, 0%, 100%, 0.6)
+}
+@font-face {
+    font-family: "Inter";
+    src: url("inter/static/Inter-SemiBold.ttf");
+    font-weight: 400, 700;
+}
+
+@font-face {
+    font-family: "Inter-Light";
+    src: url("inter/static/Inter-Light.ttf");
+    font-weight: 400;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Very_dark_blue);
+    color: var(--white)
+}
+.container{
+    background-color: var(--Dark_desaturated_blue);
+    width: 60%;
+    margin: 10% 20% 0 20%;
+    display: flex;
+    border-radius: 10px;
+}
+.head_paragraph{
+    color: var(--white);
+    font-size: 2vw;
+    font-family: "Inter";
+    margin: 15% 10% 0 10%;
+}
+#accent{
+    color: var(--Soft_violet);
+}
+.left{
+    width: 50%;
+}
+.left_paragraph{
+    color: var(--Slightly_transparent_white_stat_headings);
+    font-size: 0.8vw;
+    font-family: "Inter-Light";
+    margin: 5% 25% 0 10%;
+}
+.stat{
+    font-size: 0.8vw;
+    font-family: "Inter-Light";
+    color: var(--Slightly_transparent_white_stat_headings);
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(2rem, 1fr));
+    text-transform: uppercase;
+    margin: 10% 25% 0 10%;
+}
+.stat-bold{
+    font-size: 2vw;
+    font-family: "Inter";
+    color: var(--white);
+}
+.right{
+    background: var(--Soft_violet);
+    width: 50%;
+    border-radius: 0 10px 10px 0;
+}
+img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    margin-bottom: -5px;
+    border-radius: 0 10px 10px 0;
+}
+.attribution{
+    width: 100%;
+    text-align: center;
+    font-family: "Inter-Light";
+    font-size: 0.7em;
+}
+a{
+    text-decoration: none;
+    color: var(--Soft_violet);
+}
+
+@media only screen and (max-width: 375px) {
+    .container{
+        width: 90%;
+        margin: 0 5% 0 5%;
+        border-radius: 10px;
+        flex-direction: column-reverse;
+    }
+    .left, .right{
+        width: 100%;
+        text-align: center;
+    }
+    .right, img{
+        border-radius: 10px 10px 0 0;
+    }
+    .head_paragraph{
+        font-size: 8vw;
+        margin: 15% 5% 0 5%;
+    }
+    .left_paragraph{
+        font-size: 4.2vw;
+        margin: 5% 10% 0 10%;
+    }
+    .stat{
+        font-size: 4.2vw;
+        display: flex;
+        margin: 5% 10% 10% 10%;
+        flex-direction: column;
+    }
+    .stat > div{
+        padding: 15px;
+    }
+    .stat-bold{
+        font-size: 8vw;
+    }
+}
